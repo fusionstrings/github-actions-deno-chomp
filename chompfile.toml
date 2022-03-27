@@ -1,0 +1,14 @@
+version = 0.1
+default-task = 'serve'
+
+extensions = ['chomp@0.1:swc', 'chomp@0.1:jspm', 'chomp@0.1:npm']
+
+[template-options.npm]
+auto-install = true
+
+[[task]]
+target = 'deno2.importmap'
+deps = ['server.jsx']
+template = 'jspm'
+[task.template-options]
+env = ['deno', 'production']
