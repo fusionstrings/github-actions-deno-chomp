@@ -16,9 +16,9 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
-      - name: Setup Chomp
-        uses: guybedford/chomp-action@v1
-      - run: chomp deno2.importmap
+      # - name: Setup Chomp
+      #   uses: guybedford/chomp-action@v1
+      # - run: chomp deno2.importmap
       # - name: Setup Chomp
       #   uses: guybedford/chomp-action@v1
       # - name: Build with Chomp
