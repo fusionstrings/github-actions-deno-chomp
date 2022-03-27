@@ -1,3 +1,11 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ creation ]
+  pull_request:
+    branches: [ creation ]
+
 job:
   permissions:
     id-token: write # This is required to allow the GitHub Action to authenticate with Deno Deploy.
