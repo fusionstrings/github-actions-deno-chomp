@@ -20,6 +20,11 @@ jobs:
       #   uses: guybedford/chomp-action@v1
       # - name: Build with Chomp
       #   run: chomp deno.importmap
+      - name: Upload importmap
+        uses: actions/upload-artifact@v3
+        with:
+          name: deno2.importmap
+          path: deno2.importmap
 
   deploy:
     name: deploy
@@ -31,6 +36,10 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
+      - name: Download deno importmap
+        uses: actions/download-artifact@v3
+        with:
+          name: deno2.importmap
       # - name: Setup Chomp
       #   uses: guybedford/chomp-action@v1
       # - run: chomp deno2.importmap
