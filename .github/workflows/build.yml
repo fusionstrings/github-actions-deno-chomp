@@ -24,4 +24,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: github-actions-deno-chomp # the name of the project on Deno Deploy
+          import-map: deno.importmap
           entrypoint: server.jsx # the entrypoint to deploy

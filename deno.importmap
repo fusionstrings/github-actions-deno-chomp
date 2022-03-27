@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "react": "https://ga.jspm.io/npm:react@18.0.0-rc.3-next-de516ca5a-20220321/index.js"
+  }
+}
