@@ -1,0 +1,10 @@
+job:
+  permissions:
+    id-token: write # This is required to allow the GitHub Action to authenticate with Deno Deploy.
+    contents: read
+  steps:
+    - name: Deploy to Deno Deploy
+      uses: denoland/deployctl@v1
+      with:
+        project: github-actions-deno-chomp # the name of the project on Deno Deploy
+        entrypoint: server.jsx # the entrypoint to deploy
